@@ -10,7 +10,7 @@ export default function MenuBar({
   const { currentCity, setCurrentCity } = useCityContext();
 
   return (
-    <nav className="mx-auto mt-8 flex max-w-[1200px] justify-between">
+    <nav className="mx-auto my-8 flex max-w-[1200px] justify-between">
       <div className="flex gap-3">
         {cities.map((city) => (
           <button
@@ -29,7 +29,7 @@ export default function MenuBar({
       </div>
 
       <div>
-        <button className="flex items-center gap-2 rounded-3xl border border-primary bg-accent px-5 py-3 font-bold !text-primary">
+        <button className="flex items-center gap-2 rounded-3xl border border-primary px-5 py-3 font-bold !text-primary">
           View All
           <BsArrowRight />
         </button>
