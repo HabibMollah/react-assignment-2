@@ -21,7 +21,7 @@ export default function PropertyListPerCity({
 
   return (
     <section>
-      <ul>
+      <ul className="grid grid-cols-3 justify-items-center gap-8">
         {visibleProperties.map((property) => (
           <PropertyCard key={property.id} property={property} />
         ))}
