@@ -10,7 +10,7 @@ import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 
 export default function PropertyCard({ property }: { property: Property }) {
   return (
-    <li className="rounded-2xl bg-white p-2">
+    <li className="relative rounded-2xl bg-white p-2">
       {/* Image */}
       <span className="relative mx-auto block h-[240px] w-[360px] overflow-hidden rounded-2xl !text-primary">
         <div className="absolute z-10 flex w-full items-center justify-between p-3">
@@ -73,6 +73,14 @@ export default function PropertyCard({ property }: { property: Property }) {
           </div>
         </div>
       </div>
+      {property.isPopular && (
+        <>
+          <span className="absolute -left-2 bottom-64 rounded-r-md rounded-tl-md bg-primary px-8 py-2 font-bold text-white">
+            Popular
+            <span className="absolute -bottom-2 left-0 -z-10 h-8 w-8 rounded-bl-md bg-[#242595]"></span>
+          </span>
+        </>
+      )}
     </li>
   );
 }
