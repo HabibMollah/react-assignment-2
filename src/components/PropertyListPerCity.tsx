@@ -30,7 +30,7 @@ export default function PropertyListPerCity({
         onClick={() => setEndIndex(endIndex + 3)}
         className={`${
           propertiesPerCity <= visibleProperties ? "hidden" : "flex"
-        } mx-auto items-center gap-2 rounded-3xl bg-primary px-5 py-2 font-bold !text-white`}
+        } mx-auto my-8 items-center gap-2 rounded-3xl bg-primary px-5 py-2 font-bold !text-white`}
       >
         <LiaHourglassStartSolid className="h-5 w-5" />
         Show More
