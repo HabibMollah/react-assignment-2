@@ -2,7 +2,11 @@ import { useCityContext } from "../hooks/useCityContext";
 import { cities } from "../services/citiesExtractor";
 import { BsArrowRight } from "react-icons/bs";
 
-export default function MenuBar() {
+export default function MenuBar({
+  setEndIndex,
+}: {
+  setEndIndex: React.Dispatch<React.SetStateAction<number>>;
+}) {
   const { currentCity, setCurrentCity } = useCityContext();
 
   return (
@@ -11,7 +15,10 @@ export default function MenuBar() {
         {cities.map((city) => (
           <button
             key={city}
-            onClick={() => setCurrentCity(city)}
+            onClick={() => {
+              setCurrentCity(city);
+              setEndIndex(6);
+            }}
             className={`rounded-3xl px-5 py-3 font-bold ${
               currentCity === city ? "bg-primary text-white" : "bg-accent"
             }`}
