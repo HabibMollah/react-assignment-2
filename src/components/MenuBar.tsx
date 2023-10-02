@@ -10,6 +10,7 @@ export default function MenuBar() {
       <div className="flex gap-3">
         {cities.map((city) => (
           <button
+            key={city}
             onClick={() => setCurrentCity(city)}
             className={`rounded-3xl px-5 py-3 font-bold ${
               currentCity === city ? "bg-primary text-white" : "bg-accent"
