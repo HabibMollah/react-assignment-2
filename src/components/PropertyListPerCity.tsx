@@ -2,6 +2,7 @@ import data from "../data/properies.json";
 import { useCityContext } from "../hooks/useCityContext";
 import { LiaHourglassStartSolid } from "react-icons/lia";
 import PropertyCard from "./PropertyCard";
+import { Link } from "react-router-dom";
 
 export default function PropertyListPerCity({
   endIndex,
@@ -11,7 +12,6 @@ export default function PropertyListPerCity({
   setEndIndex: React.Dispatch<React.SetStateAction<number>>;
 }) {
   const { currentCity } = useCityContext();
-
   const properties = data.properties;
 
   const propertiesPerCity = properties.filter(
@@ -23,7 +23,9 @@ export default function PropertyListPerCity({
     <section>
       <ul className="grid grid-cols-3 justify-items-center gap-8">
         {visibleProperties.map((property) => (
-          <PropertyCard key={property.id} property={property} />
+          <Link key={property.id} to={`/${property.id}`}>
+            <PropertyCard property={property} />
+          </Link>
         ))}
       </ul>
       <button
