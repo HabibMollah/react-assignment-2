@@ -18,9 +18,9 @@ export default function PropertyPage() {
     )[0];
     console.log(property);
     return (
-      <li className="relative mx-auto max-w-md rounded-2xl bg-white p-2">
+      <li className="relative mx-auto list-none rounded-2xl bg-white p-2">
         {/* Image */}
-        <span className="relative mx-auto block h-[240px] w-[360px] overflow-hidden rounded-2xl !text-primary">
+        <span className="relative mx-auto block h-[440px] overflow-hidden rounded-2xl !text-primary">
           <div className="absolute z-10 flex w-full items-center justify-between p-3">
             <span className="z-10 rounded-full bg-white px-3 py-[6px] font-medium">
               For Rent
